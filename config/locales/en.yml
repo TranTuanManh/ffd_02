@@ -1,23 +1,28 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+  foody: "Foody"
+  anngon: "Ăn Ngon Mỗi Ngày"
+  trangchu: "Trang Chủ"
+  tinhnang: "Tính Năng"
+  monan: "Món Ăn"
+  monan_noibat: "Món Ăn Nổi Bật"
+  lienhe: "Liên Hệ"
+  dangnhap: "Đăng Nhập"
+  content_top: "Đây là một trang web đặt món ăn. Hãy cùng trải nghiệm !!!"
+  content_footer_1: "Restaurant 2014, Theme by "
+  theme: "ThemeWagon"
+  backto: "Back to "
+  top: "TOP"
+  content_footer_2: "Built With Care By "
+  ueter: "UETer"
+  follow: "Follow"
+  kham: "Mr.Kham: (+84) 162 888 2442"
+  nang: "Mr.Nang: (+84)  96 796 3970"
+  timkiem: "Tìm Kiếm"
+  content_timkiem: "Các bạn có thể tìm kiếm món ăn theo nhiều thể loại như món
+  ăn sáng, ăn trưa, ăn tối. Và nhiều loại đồ uống, ăn vặt."
+  dathang: "Đặt Hàng"
+  content_dathang: "Đặt hàng nhanh chóng thuận lợi. Giao hàng tận nơi."
+  danhgia: "Đánh Giá"
+  content_danhgia: "Các bạn có thể đánh giá sản phẩm và comment
+    về sản phầm sau khi đã thưởng thức."
