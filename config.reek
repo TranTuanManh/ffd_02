@@ -1,4 +1,11 @@
 IrresponsibleModule:
   enabled: false
+FeatureEnvy:
+  enabled: false
+TooManyStatements:
+  enabled: true
+  exclude:
+  - initialize
+  max_statements: 20
 UncommunicativeModuleName:
   enabled: false
