@@ -7,9 +7,8 @@
         <%= t "content_top" %>
       </h2>
       <h4>
-        <button class="bttn-unite bttn-md bttn-primary second-title">
-          <%= t "dangnhap" %>
-        </button>
+        <%= button_to t("dangnhap"), new_user_session_path,
+          class: "bttn-unite bttn-md bttn-primary second-title" %>
       </h4>
       <hr>
     </div>
