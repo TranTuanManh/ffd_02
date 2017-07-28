@@ -9,3 +9,5 @@ TooManyStatements:
   max_statements: 20
 UncommunicativeModuleName:
   enabled: false
+UncommunicativeVariableName:
+  enabled: false
