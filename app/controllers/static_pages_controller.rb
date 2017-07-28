@@ -1,8 +1,8 @@
 class StaticPagesController < ApplicationController
   def index
-    @products = Product.all
+    @products = product = Product.all
 
-    return if @products
+    return if product
     flash[:info] = t "khongtimthay"
     redirect_to root_path
   end
