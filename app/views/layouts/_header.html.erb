@@ -4,15 +4,21 @@
      	<div class="navbar-header">
           <a class="navbar-brand color_animation"><%= t "foody" %></a>
           <a class= "anngon"><%= t "anngon" %></a>
-        </div>
-       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav main-nav  clear navbar-right ">
-              <li>
-                <%= link_to t("dangxuat"), destroy_user_session_path, method: :delete,
-                  class: "color_animation" %>
-              </li>
-            </ul>
-         </div>
-     </div>
-   </div>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav main-nav  clear navbar-right ">
+          <li>
+            <%= link_to t("giohang"), "#", class: "color_animation" %>
+          </li>
+          <li>
+            <%= link_to t("donhang"), "#", class: "color_animation" %>
+          </li>
+          <li>
+            <%= link_to t("dangxuat"), destroy_user_session_path,
+              method: :delete, class: "color_animation" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>

@@ -1,0 +1,27 @@
+.item {
+  border: 1px solid gray;
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  width: 230px;
+
+  img {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+.desc {
+  padding: 10px;
+  text-align: center;
+}
+
+.buttons-item {
+  text-align: center;
+}
+
+.product-avatar {
+  margin: 20px;
+  padding: 20px;
+  width: 100%;
+}

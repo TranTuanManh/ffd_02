@@ -1,5 +1,6 @@
 scss_files: 'app/assets/stylesheets/**/*.css.scss'
-exclude: 'app/assets/stylesheets/*.css'
+exclude: 'app/assets/stylesheets/application.scss'
+exclude: 'app/assets/stylesheets/custom.min.css'
 linters:
   Indentation:
     exclude:
