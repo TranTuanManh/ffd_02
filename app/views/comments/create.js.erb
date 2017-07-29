@@ -1,0 +1,3 @@
+$('.comment-list').append('<%= j render "comments/item", comment: @comment %>');
+$('.comment-count').html('<%= t "binhluan" %>(<%= @comment.product.comment_counter %>)');
+$('.content-area').val('');

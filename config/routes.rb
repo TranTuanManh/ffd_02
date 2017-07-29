@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
   resources :products
   resources :orders, only: [:create, :show, :destroy]
+  resources :comments, only: [:create, :edit, :destroy]
 end

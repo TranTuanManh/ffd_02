@@ -70,8 +70,12 @@ $(function() {
     })
     .done(function(data) {
       $('#detail-order').find(".modal-body").html(data);
+      $('#detail-order').modal('show');
     })
     .fail(function(){alert("error")});
-    $('#detail-order').modal('show');
+  });
+
+  $('.post-comment').click(function() {
+    alert('hello');
   });
 });
