@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'ratings/create'
+
+  get 'ratings/show'
+
   root to: "static_pages#index"
 
   devise_for :users
@@ -11,4 +15,5 @@ Rails.application.routes.draw do
   resources :products
   resources :orders, only: [:create, :show, :destroy]
   resources :comments, only: [:create, :edit, :destroy]
+  resources :ratings, only: [:create, :destroy]
 end

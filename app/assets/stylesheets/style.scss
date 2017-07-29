@@ -21,7 +21,11 @@
 }
 
 .product-avatar {
-  margin: 20px;
+  margin-top: 60px;
   padding: 20px;
   width: 100%;
 }
+
+// Rating
+.rating-num { margin-top:0px;font-size: 54px; }
+.sr-only { margin-left: 5px;overflow: visible;clip: auto;}

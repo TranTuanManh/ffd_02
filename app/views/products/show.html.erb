@@ -1,28 +1,37 @@
-<%= render "layouts/header" %>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="row">
         <div class="col-md-4">
-          <%= image_tag "", class: "img-rounded product-avatar" %>
+        <div class="product-avatar ">
+          <%= image_tag "http://lorempixel.com/290/290/", class: "img-thumbnail" %>
+        </div>
+        <div class="product-name"></div>
         </div>
         <div class="col-md-8">
           <dl>
             <dt>
-              <h2><%= @product.name %></h2>
+              <h2><b><%= @product.name %></b></h2>
             </dt>
             <dd>
               <%= @product.description %>
             </dd>
             <dt>
-              <h4><%= t "giaban" %></h4>
+              <h3><b><%= t "giaban" %></b></h3>
             </dt>
             <dd>
-              <h4><%= @product.price %> VND</h4>
+              <h3><%= @product.price %> VND</h3>
             </dd>
+            <dt>
+            <h3><b><%= t "danhgia" %></b></h3>
+            </dt>
+            <dd><%= render "ratings/item", product: @product %></dd>
           </dl>
           <button type="button" class="btn btn-lg btn-primary">
             <%= t "themgiohang" %>
+          </button>
+          <button class="btn btn-lg btn-primary btn-order"
+            data-product='<%= @product.to_json %>'>
+              <%= t "dathang" %>
           </button>
           <div class="row" style="margin-top: 10px;">
             <div class="col-md-12 well">
@@ -52,8 +61,8 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
+<%= render "orders/order_modal" %>
 </div>
 <%= render "layouts/footer" %>

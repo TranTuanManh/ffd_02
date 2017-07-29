@@ -48,6 +48,31 @@
     }
   };
 
+  $.fn.rating = function(product) {
+    var oldScore = this.find('#my-rating').css('width');
+    var width = event.pageX - this.offset().left;
+    var score = Math.floor((100*width) /this.width())/10+1;
+    score = Math.floor(score/2);
+    $('#my-rating').css('width', width);
+    $('#rating-value').html(score);
+
+    $.ajax({
+        type: 'get',
+        url: '/ratings/create',
+        data: {product: product, score: score},
+        dataType: 'json'
+    })
+    .done(function(data){
+        location.reload();
+    })
+    .fail(function(){
+        alert('fail');
+        $('#my-rating').css('width', oldScore);
+        $('#rating-value').html(0);
+    });
+
+  }
+
 }(jQuery))
 
 $(function() {
@@ -73,9 +98,5 @@ $(function() {
       $('#detail-order').modal('show');
     })
     .fail(function(){alert("error")});
-  });
-
-  $('.post-comment').click(function() {
-    alert('hello');
   });
 });
