@@ -47,6 +47,7 @@
         this.val(this.data('oldValue'));
     }
   };
+
 }(jQuery))
 
 $(function() {
@@ -58,5 +59,19 @@ $(function() {
     $("#product-picture-modal").html(product.image);
     $("#sum").html(product.price);
     $('#order-modal').modal('show');
+  });
+
+  $('.btn-detail-order').click(function() {
+    var orderID = JSON.parse($(this).attr('data-order'));
+    $.ajax({
+        type: 'get',
+        url: '/orders/'+orderID,
+        dataType: 'html'
+    })
+    .done(function(data) {
+      $('#detail-order').find(".modal-body").html(data);
+    })
+    .fail(function(){alert("error")});
+    $('#detail-order').modal('show');
   });
 });

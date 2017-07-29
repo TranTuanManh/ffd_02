@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :users do
+  	member do
+      get :orders, to: "totals#index"
+  	end
+  end
   resources :products
-  resources :orders, only: [:create, :destroy]
+  resources :orders, only: [:create, :show, :destroy]
 end

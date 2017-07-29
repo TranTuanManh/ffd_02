@@ -1,2 +1,45 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>
+              Sản phẩm
+            </th>
+            <th>
+              Số lượng
+            </th>
+            <th>
+              Giá/sản phẩm
+            </th>
+            <th>
+              Tổng tiền
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        <% sum = 0 %>
+        <% @products.each do |p| %>
+        <% p_item = p.unitprice*p.quantity %>
+        <% sum += p_item %>
+                  <tr>
+            <td>
+              <%= p.product.name %>
+            </td>
+            <td>
+                <%= p.quantity %>
+            </td>
+            <td>
+              <%= p.unitprice %>
+            </td>
+            <td>
+              <%= p_item %>
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><b><%= sum %></b></td>
+        </tr>
+        </tbody>
+      </table>
