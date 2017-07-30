@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'categories/index'
+
+  get 'categories/show'
+
   get 'ratings/create'
 
   get 'ratings/show'
@@ -16,4 +20,5 @@ Rails.application.routes.draw do
   resources :orders, only: [:create, :show, :destroy]
   resources :comments, only: [:create, :edit, :destroy]
   resources :ratings, only: [:create, :destroy]
+  resources :categories, only: [:index, :show]
 end

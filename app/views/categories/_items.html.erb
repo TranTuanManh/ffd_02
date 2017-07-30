@@ -1,0 +1,12 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h3><%= t "mucmonan" %></h3></th>
+    </tr>
+  </thead>
+   <tbody>
+     <% categories.each do |category| %>
+       <tr><td><a href="<%= category_path category %>"><%= category.category %></a></td></tr>
+     <% end %>
+   </tbody>
+</table>

@@ -1,0 +1,7 @@
+<h2><%= @category.category %></h2>
+<% @products = @category.products %>
+<% @products.each do |product| %>
+  <%= render "products/item", product: product %>
+<% end %>
+
+<%= render "orders/order_modal" %>

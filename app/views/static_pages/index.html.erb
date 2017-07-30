@@ -37,15 +37,7 @@
   <div class="container">
     <div class="col-md-12">
       <div class="col-md-3">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th><h3><%= t "mucmonan" %></h3></th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
+        <%= render "categories/items", categories: @categories %>
       </div>
       <div class="col-md-9">
         <div class="row">
