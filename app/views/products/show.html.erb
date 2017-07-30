@@ -1,0 +1,64 @@
+<%= render "layouts/header" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag "", class: "img-rounded product-avatar" %>
+        </div>
+        <div class="col-md-8">
+          <dl>
+            <dt>
+              <h2><%= @product.name %></h2>
+            </dt>
+            <dd>
+              <%= @product.description %>
+            </dd>
+            <dt>
+              <h4><%= t "giaban" %></h4>
+            </dt>
+            <dd>
+              <h4><%= @product.price %> VND</h4>
+            </dd>
+          </dl>
+          <button type="button" class="btn btn-lg btn-primary">
+            <%= t "themgiohang" %>
+          </button>
+          <div class="row" style="margin-top: 10px;">
+            <div class="col-md-12">
+              <h3><%= t "binhluan" %></h3>
+              <div class="media well">
+                <div class="media-body">
+                  <div class="media">
+                    <%= link_to image_tag("", class: "media-object"),
+                      class: "pull-left" %>
+                    <div class="media-body">
+                      <h4 class="media-heading">
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="comment-area">
+                <form>
+                  <div class="form-group">
+                    <label for="comment"><%= t "binhluancuaban" %></label>
+                    <textarea class="form-control" rows="5"
+                      id="comment" placeholder="<%= t"nhapbinhluan" %>">
+                    </textarea>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary">
+                      <%= t "dangbinhluan" %>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render "layouts/footer" %>

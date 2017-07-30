@@ -34,4 +34,39 @@
   <%= render "layouts/footer" %>
 <% else %>
   <%= render "layouts/header" %>
+  <div class="container">
+    <div class="col-md-12">
+      <div class="col-md-3">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th><h3><%= t "mucmonan" %></h3></th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <h2><%= t "monan_noibat" %></h2>
+          <div class="item-gallery">
+            <% @products.each do |product| %>
+              <%= render "elements/item", product: product %>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="row">
+          <h2><%= t "monmoi" %></h2>
+          <div class="item-gallery">
+            <% @products.each do |product| %>
+              <%= render "elements/item", product: product %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "layouts/footer" %>
 <% end %>
